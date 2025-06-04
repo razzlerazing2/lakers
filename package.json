@@ -1,16 +1,39 @@
 {
-  "name": "lakers",
-  "version": "1.0.0",
-  "description": "![GitHub Repo size](https://img.shields.io/github/repo-size/3kh0/3kh0-lite?style=flat&label=Repo%20size) ![GitHub Repo stars](https://img.shields.io/github/stars/3kh0/3kh0-lite?style=flat&label=Repo%20stars&color=yellow&link=https%3A%2F%2Fgithub.com%2F3kh0%2F3kh0-lite%2Fstargazers)",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
+  "name": "skelly",
+  "version": "5.2.5",
+  "type": "module",
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=16.0.0"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "scripts": {
+    "start": "node index.js",
+    "format": "biome format --write .",
+    "precommit": "npm run format && biome check --write .",
+    "lint": "biome lint --write .",
+    "build": "webpack --config webpack.config.mjs"
+  },
+  "author": "Skelly",
+  "license": "GPL-3.0-or-later",
   "dependencies": {
+    "@nebula-services/bare-server-node": "^2.0.4",
     "chalk": "^5.4.1",
-    "express": "^5.1.0"
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-basic-auth": "^1.2.1",
+    "mime": "^4.0.6",
+    "node-fetch": "^3.3.2",
+    "tsparticles": "^3.8.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.5",
+    "@babel/preset-env": "^7.21.5",
+    "@biomejs/biome": "1.9.4",
+    "babel-loader": "^10.0.0",
+    "webpack": "^5.99.7",
+    "webpack-cli": "^6.0.1",
+    "webpack-node-externals": "^3.0.0"
   }
 }
